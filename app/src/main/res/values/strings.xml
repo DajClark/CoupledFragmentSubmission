@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">CoupledFragmentSubmission</string>
+    <string name="next">Next</string>
+    <string name="edit">Edit</string>
+    <string name="prev">Prev</string>
+    <string name="game_list">Games List</string>
+    <string name="game_title">Game</string>
+    <string name="game_list_platform">Platform</string>
+    <string name="game_list_description">Game Description</string>
+    <string name="game_label">Game:</string>
+    <string name="game_platform_label">Platform:</string>
+    <string name="game_description_label">Description:</string>
+    <string name="game_complete_label">Game Complete?</string>
+    <string name="game_complete">You have completed %2$d out of %2$d games</string>
 </resources>
