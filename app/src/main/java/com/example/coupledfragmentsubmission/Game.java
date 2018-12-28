@@ -12,9 +12,14 @@ public class Game {
     private Date dateComplete;
     private boolean isComplete;
 
-    public Game() {
+    public Game(String title, String platform, String description) {
+
+        this.title = title;
+        this.platform = platform;
+        this.description = description;
         this.gameID = UUID.randomUUID();
         this.dateComplete = new Date();
+        this.isComplete = false;
     }
 
     public UUID getGameID() {
