@@ -59,4 +59,10 @@
             android:layout_height="wrap_content"
             android:text="@string/game_complete"/>
 
+    <Button
+            android:id="@+id/apply"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/apply"/>
+
 </LinearLayout>

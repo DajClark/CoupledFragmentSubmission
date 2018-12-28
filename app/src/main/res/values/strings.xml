@@ -12,4 +12,5 @@
     <string name="game_description_label">Description:</string>
     <string name="game_complete_label">Game Complete?</string>
     <string name="game_complete">You have completed %2$d out of %2$d games</string>
+    <string name="apply">Apply</string>
 </resources>
