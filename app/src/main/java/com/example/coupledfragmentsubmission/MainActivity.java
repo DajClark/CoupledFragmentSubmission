@@ -103,12 +103,12 @@ public class MainActivity extends AppCompatActivity {
     private void editFragment() {
 
         FragmentManager fm = getSupportFragmentManager();
-        Fragment fragment = fm.findFragmentById(R.id.fragment_container);
+        Fragment fragment = fm.findFragmentById(R.id.container);
 
         if (fragment == null){
             EditFragment editFragment = new EditFragment();
             fm.beginTransaction()
-                    .add(R.id.fragment_container, editFragment)
+                    .add(R.id.container, editFragment)
                     .commit();
         }
     }
