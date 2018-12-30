@@ -8,60 +8,54 @@
               android:weightSum="1">
 
     <TextView
-            android:id="@+id/game_label"
+            android:id="@+id/gameLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/game_label"/>
 
     <EditText
-            android:id="@+id/game_title"
+            android:id="@+id/gameTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/game_title"/>
 
     <TextView
-            android:id="@+id/game_platform_label"
+            android:id="@+id/gamePlatformLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/game_platform_label"/>
 
     <EditText
-            android:id="@+id/game_platform"
+            android:id="@+id/gamePlatform"
             android:layout_width="match_parent"
             android:layout_height="@android:dimen/notification_large_icon_height"
             android:hint="@string/game_list_platform"/>
 
     <TextView
-            android:id="@+id/game_description_label"
+            android:id="@+id/gameDescriptionLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/game_description_label"/>
 
     <EditText
-            android:id="@+id/game_description"
+            android:id="@+id/gameDescription"
             android:layout_width="match_parent"
             android:layout_height="@android:dimen/notification_large_icon_height"
             android:hint="@string/game_list_description"/>
 
     <Button
-            android:id="@+id/completed_date"
+            android:id="@+id/completedDate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
     <CheckBox
-            android:id="@+id/todo_complete"
+            android:id="@+id/gameComplete"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/game_complete_label"/>
 
-    <TextView
-            android:id="@+id/games_complete"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/game_complete"/>
-
     <Button
-            android:id="@+id/apply"
+            android:id="@+id/buttonApply"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:text="@string/apply"/>
