@@ -5,6 +5,7 @@ import java.util.UUID;
 
 public class Game {
 
+    // Private property variables to hold Game object data.
     private UUID gameID;
     private String title;
     private String platform;
@@ -12,6 +13,7 @@ public class Game {
     private Date dateComplete;
     private boolean isComplete;
 
+    // Constructor parameters for creating a new Game object.
     public Game(String title, String platform, String description) {
 
         this.title = title;
@@ -22,12 +24,10 @@ public class Game {
         this.isComplete = false;
     }
 
+
+    // Getters and Setters for the private game data properties.
     public UUID getGameID() {
         return gameID;
-    }
-
-    public void setGameID(UUID gameID) {
-        this.gameID = gameID;
     }
 
     public String getTitle() {

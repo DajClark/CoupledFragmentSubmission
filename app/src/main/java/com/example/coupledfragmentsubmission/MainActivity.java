@@ -28,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-
         // Call to super method to call the super class onCreate methods.
         super.onCreate(savedInstanceState);
 
@@ -79,37 +78,70 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    // Method to update the view elements to display game details from list.
     private void updateView() {
 
+        // Initialises view elements using corresponding ID's from the XML layout file.
         final TextView gameTextView = findViewById(R.id.textViewGame);
         final TextView platformTextView = findViewById(R.id.textViewPlatform);
         final TextView descTextView = findViewById(R.id.textViewDescription);
         final TextView completeTextView = findViewById(R.id.textViewComplete);
 
+        // Sets values of view elements using the list with the current index position.
         for (Game game : list) {
             if (list.indexOf(game) == indexPos) {
                 gameTextView.setText(game.getTitle());
                 platformTextView.setText(game.getPlatform());
                 descTextView.setText(game.getDescription());
 
+                    // Sets the complete message and colour based on completion status.
                     if(game.isComplete()) {
                     completeTextView.setBackgroundColor(ContextCompat.getColor(this,R.color.backgroundSuccess));
                     completeTextView.setText("Complete");
-                }
+                    } else {
+                        completeTextView.setBackgroundColor(ContextCompat.getColor(this,R.color.backgroundDefault));
+                        completeTextView.setText("");
+                    }
             }
         }
     }
 
+    // Method to update a current list entry with new edited game details.
+    public void updateEntry(Game newGame) {
+        Game oldGame = list.get(indexPos);
+
+        // Updates the current list item with the details passed by the newGame argument.
+        oldGame.setTitle(newGame.getTitle());
+        oldGame.setPlatform(newGame.getPlatform());
+        oldGame.setDescription(newGame.getDescription());
+        oldGame.setDateComplete(newGame.getDateComplete());
+        oldGame.setComplete(newGame.isComplete());
+
+        // Calls the view to update with new details.
+        updateView();
+    }
+
+    // Method to start the edit fragment.
     private void editFragment() {
 
+        // Initialises activity fragment manager and set fragment to show in the activities container.
         FragmentManager fm = getSupportFragmentManager();
         Fragment fragment = fm.findFragmentById(R.id.container);
 
         if (fragment == null){
+
+            // Packages the index position to be passed to the fragment.
+            Bundle bundle = new Bundle();
+            bundle.putInt("index", indexPos);
             EditFragment editFragment = new EditFragment();
+            editFragment.setArguments(bundle);
+
+            // Fragment transaction to show the edit fragment within the activity.
             fm.beginTransaction()
                     .add(R.id.container, editFragment)
+                    .addToBackStack(null)
                     .commit();
         }
     }
+
 }
